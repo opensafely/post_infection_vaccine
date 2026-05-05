@@ -18,7 +18,6 @@ def generate_dataset(study_start, study_end_exp, study_end_out):
     # Broad population: any patient with a non-null date of birth.
     # The study-specific inclusion and exclusion criteria are captured as
     # boolean variables (inex_*, excl_*) and applied in the downstream
-    # R cleaning script, mirroring the approach used in the original project.
     dataset.define_population(
         patients.date_of_birth.is_not_null()
     )
